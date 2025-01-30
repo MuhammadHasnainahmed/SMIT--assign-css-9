@@ -1,129 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RESPONSIVE</title>
 
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
 
-*{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        padding: 20px;
+        background-color: black;
+        color: white;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 20px;
+      }
+
+      nav ul li {
+        list-style: none;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+
+      .main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .head,
+      .footer {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+      }
+      .head {
+        background-color: tomato;
+      }
+      .footer {
+        background-color: skyblue;
+      }
+
+      .container {
+        display: flex;
+        width: 100%;
+        height: 350px;
+      }
+      .left, .right, .mid {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        text-align: center;
+      }
+      .left {
+        background-color: yellow;
+      }
+      .right {
+        background-color: greenyellow;
+      }
+      .mid {
+        background-color: rgb(236, 234, 234);
+        flex-grow: 2;
+      }
+
+      /* Tablet */
+      @media (max-width: 786px) {
+        .container {
+          flex-wrap: wrap;
+          height: auto;
         }
-         nav{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            
-            padding: 20px;
-            background-color: black;
-            color: white;
+        .mid {
+          width: 100%;
+          height: 150px;
+          order: -1;
         }
 
-        nav ul{
-            display: flex;
-            gap: 20px;
+        .right,.left{
+            height: 200px;
         }
+      }
 
-        nav ul li{
-            list-style: none;
+      /* Mobile */
+      @media (max-width: 450px) {
+        .container {
+          flex-direction: column;
+          height: auto;
         }
-
-        nav ul li a{
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
+        .left,
+        .right,
+        .mid {
+          width: 100%;
+          height: 200px;
         }
-
-        .container{
-            width: 100%;
-            margin-top: 3%;
-            /* height: 700px; */
-            background-color: rebeccapurple;
-            font-size: x-large;
-            text-align: center;
-            
-
+        .head {
+          height: 120px;
         }
-
-        .head-foot{
-            background-color: red;
-            padding: 20px;
-            color: white;
-        }
-
-
-        .main{
-            display: flex;
-            justify-content: center;
-            background-color: antiquewhite;
-            margin: auto auto;
-            gap: 20px;
-            height: 600px;
-        }
-
-        .main div{
-            width:  100%;
-            color: white;
-            background-color: gray;align-content: center;
-        }
-        
-        @media screen and (max-width: 600px) {
-              .child{
-                order: -1;
-              } 
-        }
-
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <div>
+      <div>
+        <h1>Sunzine</h1>
+      </div>
 
-            <h1>Sunzine</h1>
-        </div>
-
-        <div>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-
-        </div>
-
+      <div>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
     </nav>
 
-
-    <div class="container">
-        <div class="head-foot">
-            header
-        </div>
-
-        <div class="main">
-
-            <div>
-                left
-            </div>
-
-            <div class="child">
-                main
-            </div>
-
-            <div>
-                right
-            </div>
-        </div>
-
-        <footer class="head-foot">
-             footer
-        </footer>
-
+    <div class="main">
+      <div class="head">
+        <h3>Header</h3>
+      </div>
+      <div class="container">
+        <div class="left"><h3>Left</h3></div>
+        <div class="mid"><h3>Main</h3></div>
+        <div class="right"><h3>Right</h3></div>
+      </div>
+      <div class="footer">
+        <h3>Footer</h3>
+      </div>
     </div>
-
-
-
-</body>
+  </body>
 </html>
