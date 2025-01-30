@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESPONSIVE</title>
+
+    <style>
+
+*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+         nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+            padding: 20px;
+            background-color: black;
+            color: white;
+        }
+
+        nav ul{
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li{
+            list-style: none;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .container{
+            width: 100%;
+            margin-top: 3%;
+            /* height: 700px; */
+            background-color: rebeccapurple;
+            font-size: x-large;
+            text-align: center;
+            
+
+        }
+
+        .head-foot{
+            background-color: red;
+            padding: 20px;
+            color: white;
+        }
+
+
+        .main{
+            display: flex;
+            justify-content: center;
+            background-color: antiquewhite;
+            margin: auto auto;
+            gap: 20px;
+            height: 600px;
+        }
+
+        .main div{
+            width:  100%;
+            color: white;
+            background-color: gray;align-content: center;
+        }
+        
+        @media screen and (max-width: 600px) {
+              .child{
+                order: -1;
+              } 
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+
+            <h1>Sunzine</h1>
+        </div>
+
+        <div>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <div class="container">
+        <div class="head-foot">
+            header
+        </div>
+
+        <div class="main">
+
+            <div>
+                left
+            </div>
+
+            <div class="child">
+                main
+            </div>
+
+            <div>
+                right
+            </div>
+        </div>
+
+        <footer class="head-foot">
+             footer
+        </footer>
+
+    </div>
+
+
+
+</body>
+</html>

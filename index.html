@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunzine</title>
+       <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+          
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+            padding: 20px;
+            background-color: black;
+            color: white;
+        }
+
+        nav ul{
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li{
+            list-style: none;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+
+           .main{
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* background-color: red; */
+            /* justify-content: center; */
+            margin: auto auto;
+            gap: 20px;
+            width: 80%;
+            padding: 20px;
+            /* height: 100vh; */
+            }
+           .container{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            /* justify-content: center;
+            align-items: center; */
+            }
+           .container div{
+            width:  35%;
+            height: 300px;
+            background-color: gray;
+           }
+
+           .container div img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+           }
+
+           .child{
+            width: 50% !important;
+           }
+
+           .child-2{
+            width: 20% !important;
+           }
+
+           @media screen and (max-width: 600px) {
+                
+            .main{
+                width: 100%;
+            }
+
+            .container{
+                flex-wrap: wrap;
+                width: 100% !important;
+            }
+
+            .child{
+            width: 100% !important;
+           }
+
+           .child-2{
+            width: 100% !important;
+           }
+            
+           }
+       </style>
+</head>
+        
+ 
+<body>
+
+    <nav>
+        <div>
+
+            <h1>Sunzine</h1>
+        </div>
+
+        <div>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="/responsive.html">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <div class="main">
+        <div class="container">
+            <div class="child"><img src="/img/ling_hua-6FxMExsakdY-unsplash.jpg" alt=""></div>
+            <div class="child-2"><img src="/img/leo_visions-nzdvmBa8lb0-unsplash.jpg" alt=""></div>
+            <div><img src="/img/dima-solomin-4fLZjleexow-unsplash.jpg" alt=""></div>
+            <div><img src="/img/philip-oroni-v0PnusRa6aM-unsplash.jpg" alt=""></div>
+        </div>
+
+        <div class="container">
+            <div><img src="/img/philip-oroni-v0PnusRa6aM-unsplash.jpg" alt=""></div>
+            <div class="child"><img src="/img/leo_visions-nzdvmBa8lb0-unsplash.jpg" alt=""></div>
+            <div><img src="/img/dima-solomin-4fLZjleexow-unsplash.jpg" alt=""></div>
+            <div><img src="/img/ling_hua-6FxMExsakdY-unsplash.jpg" alt=""></div>
+        </div><div class="container">
+            <div><img src="/img/leo_visions-nzdvmBa8lb0-unsplash.jpg" alt=""></div>
+            <div class="child-2"><img src="/img/dima-solomin-4fLZjleexow-unsplash.jpg" alt=""></div>
+            <div><img src="/img/ling_hua-6FxMExsakdY-unsplash.jpg" alt=""></div>
+            <div class="child"><img src="/img/philip-oroni-v0PnusRa6aM-unsplash.jpg" alt=""></div>
+        </div>
+    </div>
+</body>
+</html>
